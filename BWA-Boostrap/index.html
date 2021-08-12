@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BWA Bootstrap</title>
+
+    <!-- Import offline Bootstrap -->
+    <!-- Import yang diperlukan saja -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <!-- Harus kedua yang custom agar bootstrap default bisa ke overwrite atau ketimpa -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Import google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:300,400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Import offline Bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <!-- Order yang benar untuk layout yaitu Container -> Row -> Column -->
+    <!-- Buka css-tricks.com untuk belajar lebih lanjut tentang Flexbox -->
+
+    <section class="herobwa">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>
+                        The Design Thinking superpowers
+                    </h1>
+                    <p>
+                        Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.
+                    </p>
+                    <a class="btn btn-primary" href="#" role="button">Get Started</a>
+                </div>
+                <div class="col">
+                    <img width="600px" src="images/hero-icon.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
