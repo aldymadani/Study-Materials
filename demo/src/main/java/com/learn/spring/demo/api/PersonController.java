@@ -4,8 +4,10 @@ import com.learn.spring.demo.model.Person;
 import com.learn.spring.demo.service.PersonService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.UUID;
 
@@ -19,7 +21,7 @@ public class PersonController {
     private final PersonService personService;
 
     @PostMapping(ADD_PERSON)
-    public void addPerson(@RequestBody Person person) {
+    public void addPerson(@Validated @NotNull @RequestBody Person person) {
         personService.addPerson(person);
     }
 
@@ -39,7 +41,7 @@ public class PersonController {
     }
 
     @PutMapping(path = ID)
-    public void updatePerson(@PathVariable("id") UUID id, @RequestBody Person personToUpdate) {
+    public void updatePerson(@PathVariable("id") UUID id, @Validated @NotNull @RequestBody Person personToUpdate) {
         personService.updatePerson(id, personToUpdate);
     }
 }
