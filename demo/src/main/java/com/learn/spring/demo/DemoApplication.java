@@ -1,5 +1,6 @@
 package com.learn.spring.demo;
 
+import com.learn.spring.demo.model.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
